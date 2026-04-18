@@ -41,7 +41,7 @@ ECE separates execution from control.
 
 ECE operates between execution steps, evaluating state after each model response and determining whether execution is allowed to continue.
 
-Enables bounded execution when integrated into unbounded workflows.
+It provides a deterministic boundary for otherwise unbounded execution flows.
 
 
 ---
@@ -163,7 +163,7 @@ Use a custom `cost_model` when:
 - Incorrect pricing → incorrect enforcement decisions
 - ECE does not validate or fetch pricing externally
 
-###  Design Principle
+### Design Principle
 
 ECE enforces execution deterministically over a defined cost function.
 
@@ -190,13 +190,7 @@ Not supported:
 
 ## Get Started
 
-### 1. Installation
-```bash
-pip install veloryn
-
-```
-
-### 2. Minimal Integration
+### 1. Minimal Integration
 ```python
 
 from veloryn import execute, print_summary
@@ -242,13 +236,13 @@ print_summary(TASK_ID)
 
 ```
 
-### 3. Execution Flow
-ECE wrapped your execution:  
+### 2. Execution Flow
+ECE evaluates execution around each step:    
 PRE  → estimate cost  
 EXEC → run function  
 POST → compute actual cost  
 
-If the next step is likely to exceed budget → execution stops.
+If the next step is likely to exceed budget → a BLOCK decision is returned.  
 
 ### 4. Required Contract
 
@@ -277,8 +271,7 @@ ECE will stop execution if:
 
 ### 6. Sample Output
 
-```
-
+```text
 Step 3
 Cost: $0.0040 / $0.0500
 Status: ALLOWED
@@ -317,13 +310,12 @@ python examples/basic_enforcement.py
 
 ```
 See:  
-examples/basic_enforcement.py   
-examples/looping_with_ece.py  
-examples/looping_without_ece_observation_mode.py   
-examples/fallback_mode.py  
-examples/multi_agent_with_ece.py  
-examples/multi_agent_without_ece.py  
-
+- [examples/basic_enforcement.py](examples/basic_enforcement.py)  
+- [examples/looping_with_ece.py](examples/looping_with_ece.py)  
+- [examples/looping_without_ece_observation_mode.py](examples/looping_without_ece_observation_mode.py)  
+- [examples/fallback_mode.py](examples/fallback_mode.py)  
+- [examples/multi_agent_with_ece.py](examples/multi_agent_with_ece.py)  
+- [examples/multi_agent_without_ece.py](examples/multi_agent_without_ece.py)
 
 ---
 
