@@ -3,7 +3,7 @@
 Runtime decision layer for enforcing cost constraints in multi-step LLM execution.
 
 LLM workflows can accumulate cost across steps without a global constraint.
-Execution Constraint Engine (ECE) enforces a deterministic cost boundary across multi-step execution.
+Execution Constraint Engine (ECE) provides a deterministic enforcement decision based on projected cost.
 
 ## Install
 
@@ -21,7 +21,7 @@ ECE does not rely on heuristics, patterns, or learned behavior.
 
 Current scope: cost-based enforcement.  
 
-Future versions extend enforcement beyond cost into behavioral and adaptive constraints.
+Future versions extend enforcement using behavioral signals and execution patterns.
 
 
 ---
@@ -364,7 +364,7 @@ ECE tracks total cost across steps and returns a stop decision when the defined 
 ## Known Limitations (v1)
 
 - Cost estimation is heuristic  
-    Cost estimation uses simple approximation (not tokenizer-accurate)
+    Cost estimation is approximate (not tokenizer-accurate)
 
 - Budget enforcement is predictive  
     May overshoot by one step  
@@ -398,12 +398,12 @@ ECE tracks total cost across steps and returns a stop decision when the defined 
 
 Execution Constraint Engine is a decision and evaluation system.
 
-It does not execute workflows
+ECE does not execute workflows.
 
-Enforcement depends on correct integration
+Enforcement depends on integration.
 
 
-It does not guarantee:
+ECE does not guarantee:
 
 - cost control
 
