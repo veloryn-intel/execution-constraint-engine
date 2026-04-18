@@ -33,8 +33,7 @@ ECE separates execution from control.
 | Layer | Responsibility |
 |---------|------------------|
 | Your system | Executes workflow |
-| ECE | Evaluates execution state |
-| ECE | Returns enforcement decisions |
+| ECE | Evaluates execution state and returns enforcement decisions |
 | Your system | Applies enforcement decisions |
 
 
@@ -244,7 +243,7 @@ POST → compute actual cost
 
 If the next step is likely to exceed budget → a BLOCK decision is returned.  
 
-### 4. Required Contract
+### 3. Required Contract
 
 `run_task` must return:
 ```
@@ -260,7 +259,7 @@ Missing or invalid `usage` → execution fails (`RuntimeError`)
 
 ECE does not infer usage.
 
-### 5. Failure Conditions
+### 4. Failure Conditions
 ECE will stop execution if:
 - Budget exceeded
 - Usage missing
@@ -269,7 +268,7 @@ ECE will stop execution if:
 
 
 
-### 6. Sample Output
+### 5. Sample Output
 
 ```text
 Step 3
@@ -302,7 +301,7 @@ Status: Blocked (budget threshold reached)
 ![Execution Output](examples/demo/sample_output.png)  
 
 
-### 7. Examples
+### 6. Examples
 
 Run:
 ```bash
