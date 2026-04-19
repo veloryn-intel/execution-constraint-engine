@@ -1,4 +1,4 @@
-# Execution Constraint Engine
+# Execution Constraint Engine (ECE)
 
 Runtime decision layer for enforcing cost constraints in multi-step LLM execution.
 
