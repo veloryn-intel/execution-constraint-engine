@@ -296,9 +296,6 @@ Steps executed: 5
 Status: Blocked (budget threshold reached)
 
 ```
-### Sample Screenshot
-
-![Execution Output](examples/demo/sample_output.png)  
 
 
 ### 6. Examples
