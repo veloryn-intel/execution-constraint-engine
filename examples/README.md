@@ -6,6 +6,11 @@ Each scenario is provided in two modes:
 - without enforcement (unbounded execution)
 - with ECE (cost-constrained execution)
 
+All outputs shown are from real runs (no simulation).  
+Costs are computed from actual token usage returned by the model. 
+
+---
+
 ## Scenarios
 
 ### 1. Basic Enforcement
