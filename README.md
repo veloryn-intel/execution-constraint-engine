@@ -1,3 +1,16 @@
+<p align="center">
+  <img src="assets/ece-banner.png" width="100%" />
+  <img src="assets/ece_explainer.png" width="100%" style="margin-top:-8px;" />
+</p>
+
+<p align="center">
+  <img src="assets/with-ece.png" width="100%" />
+</p>
+
+<p align="center">
+  <sub>Execution stops before cost exceeds the defined limit</sub>
+</p>
+
 # Execution Constraint Engine (ECE)
 
 Runtime decision layer for enforcing cost constraints in multi-step LLM execution.
