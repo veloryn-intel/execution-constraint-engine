@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "veloryn"
-version = "0.1.1"
+version = "0.1.2"
 description = "Deterministic cost-bounded execution for multi-step LLM workflows"
 
 readme = "README_PYPI.md"
