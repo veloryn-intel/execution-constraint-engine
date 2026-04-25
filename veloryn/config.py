@@ -7,13 +7,13 @@ MODEL_PRICING = {
         "input": 0.00000015,
         "output": 0.0000006
     },
-    "claude-3-sonnet": {
+    "claude-sonnet-4-6": {
         "input": 0.000003,
         "output": 0.000015
     },
-    "claude-3-haiku": {
-        "input": 0.00000025,
-        "output": 0.00000125
+    "claude-haiku-4-5-20251001": {
+        "input": 0.000001,
+        "output": 0.000005
     }
 }
 
